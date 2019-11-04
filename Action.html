@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+    
+    <div is="page" id="home" data-role="page" style="background:-webkit-linear-gradient(rgb(163, 20, 34), rgb(228, 230, 217))">
+        <div is="header" data-role="header" data-position="fixed" data-theme="b">
+            <h3 style="color:rgb(221, 41, 41);text-align:center;font-size:24px;">ACTION</h3>
+            <a class="ui-btn ui-btn-left  ui-btn-icon-left ui-icon-home ui-btn-icon-notext ui-corner-all" data-transition="slide" href="index.html" rel="external">Back</a>
+        </div>
+        <div is="content" role="main" class="ui-content">
+            <ul is="listview" data-role="listview" data-inset="true" id="hero_list" data-theme="b" style="margin:0;">
+                <li is="listview-li">
+                    <a href="#Content1" data-transition="slide" data-theme="a"  data-icon="star">Fast & Furious</a>
+                </li>
+                <li is="listview-li">
+                    <a href="#Content2" data-transition="flip" data-theme="a"  data-icon="star">The hobbit</a>
+                </li>
+                <li is="listview-li">
+                    <a href="#Content3" data-transition="slideup" data-theme="a"  data-icon="star">Mission Impossible</a>
+                </li>
+                <li is="listview-li">
+                    <a href="#Content4" data-transition="slidedown" data-theme="a"  data-icon="star">Kingsman</a>
+                </li>
+                <li is="listview-li">
+                    <a href="#Content5" data-transition="pop" data-theme="a"  data-icon="star">Rambo</a>
+                </li>
+            </ul>
+        </div>
+    </div>    
+    
+    <!-- Page: Content  -->
+    <div id="Content1" data-role="page" style="background-color: black;">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3 style="color:red;text-align:center;font-size:24px;">ACTION</h3>
+            <a class="ui-btn ui-btn-left" href="#home" data-transition="slide" data-direction="reverse" style = "color : red;">Back</a>
+        </div>
+        <div class="ui-content">
+            <div id="hero" style="font-size:25px; font-weight:bold; width:100%; text-align:center; color: rgb(165, 34, 34);">Fast & Furious</div>
+            <div><img src="IMG/Fast.gif" style="width:400px;height: 500px;margin-left: 420px"></div>
+        </div>
+        <div style="text-align:center;margin-left:500px;margin-right: 500px;">
+                <a href="#BuyTicket" data-role="button" data-theme="b" data-icon="check">
+                    <h5  style="text-align:center; color: red">CLICK TO BUY</h5>
+                </a>
+        </div>
+    </div>
+   
+    <!-- Page: Content  -->
+    <div id="Content2" data-role="page" style="background-color: black;">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3 style="color:red;text-align:center;font-size:24px;">ACTION</h3>
+
+            <a class="ui-btn ui-btn-left" href="#home" data-transition="slide" data-direction="reverse" style = "color : red;">Back</a>
+        </div>
+        <div class="ui-content">
+            <div id="hero" style="font-size:25px; font-weight:bold; width:100%; text-align:center;color: rgb(102, 36, 163);">Mission Impossible</div>
+            <div><img src="IMG/Hobbit.gif" style="width:400px;height: 500px;margin-left: 420px"></div>
+        </div>
+        <div style="text-align:center;margin-left:500px;margin-right: 500px;">
+            <a href="#BuyTicket" data-role="button" data-theme="b" data-icon="check">
+                <h5  style="text-align:center; color: red">CLICK TO BUY</h5>
+            </a>
+    </div>
+    </div>
+    
+    <!-- Page: Content  -->
+    <div id="Content3" data-role="page" style="background-color: black;">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3 style="color:red;text-align:center;font-size:24px;">ACTION</h3>
+
+            <a class="ui-btn ui-btn-left" href="#home" data-transition="slide" data-direction="reverse" style = "color : red;">Back</a>
+        </div>
+        <div class="ui-content">
+            <div id="hero" style="font-size:25px; font-weight:bold; width:100%; text-align:center;color: rgb(128, 28, 66);">Kingsman</div>
+            <div><img src="IMG/MI.gif" style="width:400px;height: 500px;margin-left: 420px"></div>
+        </div>
+        <div style="text-align:center;margin-left:500px;margin-right: 500px;">
+            <a href="#BuyTicket" data-role="button" data-theme="b" data-icon="check">
+                <h5  style="text-align:center; color: red">CLICK TO BUY</h5>
+            </a>
+    </div>
+    </div>
+    
+    <!-- Page: Content  -->
+    <div id="Content4" data-role="page" style="background-color: black;">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3 style="color:red;text-align:center;font-size:24px;">ACTION</h3>
+
+            <a class="ui-btn ui-btn-left" href="#home" data-transition="slide" data-direction="reverse" style = "color : red;">Back</a>
+        </div>
+        <div class="ui-content">
+            <div id="hero" style="font-size:25px; font-weight:bold; width:100%; text-align:center;color: rgb(45, 160, 60);">Rambo</div>
+            <div><img src="IMG/Kingsman.gif" style="width:400px;height: 500px;margin-left: 420px"></div>
+        </div>
+        <div style="text-align:center;margin-left:500px;margin-right: 500px;">
+            <a href="#BuyTicket" data-role="button" data-theme="b" data-icon="check">
+                <h5  style="text-align:center; color: red">CLICK TO BUY</h5>
+            </a>
+    </div>
+    </div>
+    
+    <!-- Page: Content  -->
+    <div id="Content5" data-role="page" style="background-color: black;">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h3 style="color:red;text-align:center;font-size:24px;">ACTION</h3>
+
+            <a class="ui-btn ui-btn-left" href="#home" data-transition="slide" data-direction="reverse" style = "color : red;">Back</a>
+        </div>
+        <div class="ui-content">
+            <div id="hero" style="font-size:25px; font-weight:bold; width:100%; text-align:center;color: rgb(29, 19, 170);">Thor</div>
+            <div><img src="IMG/Rambo.gif" style="width:400px;height: 500px;margin-left: 420px"></div>
+        </div>
+        <div style="text-align:center;margin-left:500px;margin-right: 500px;">
+            <a href="#BuyTicket" data-role="button" data-theme="b" data-icon="check">
+                <h5  style="text-align:center; color: red">CLICK TO BUY</h5>
+            </a>
+    </div>
+    </div>
+     <!-- Page: BuyTicket  -->
+     <div id="BuyTicket" data-role="page" style="background-color: rgba(0, 0, 0, 0.274);">
+        
+        <form action="" class="form-inline;">
+            <table class="table w-75 table-bordered mx-auto mt-5 table-dark">
+                <tr>
+                    <a href="#home" data-role="button" data-theme="b" data-icon="arrow-l" style="color: red;">PLEASE FILL FORM</a>
+                </tr>
+                <tr style="margin-left: 200px;">
+                    <td  class="bg-danger text-center text-white">Name</td>
+                    <td><input  class="form-control w-100 text-center" type="text" placeholder="Write your name here"></td>
+                    <td class="bg-danger text-center text-white">Email</td>
+                    <td><input class="form-control w-100 text-center" type="email" placeholder="@gm.nfu.edu.tw"></td>
+                </tr>
+                <tr style="margin-left: 200px;">
+                    <td class="bg-danger text-center text-white">Amount of ticket</td>
+                    <td class="text-center"><select class="form-control mr-2"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option></select>Ticket</td>
+                    <td class="bg-danger text-center text-white">Sweetbox</td>
+                    <td><div class="btn-group text-center">
+                            <label class="btn btn-default text-black">
+                            <input type="checkbox" autocomplete="off"> Yes
+                            </label>
+                            <label class="btn btn-default text-black">
+                            <input type="checkbox" autocomplete="off"> No
+                            </label>
+                            </div>
+                    </td>    
+                </tr>
+                <tr style="margin-left: 200px; text-align: center;" >
+                    <td class="bg-danger text-white" >Phone number</td>
+                    <td><input class="form-control w-100 text-center" type="tel" placeholder="+886"></td>
+                    <td class="bg-danger text-white">Submit Date</td>
+                    <td><input class="form-control w-100 text-center" type="date"></td>
+                </tr>
+                <tr style="margin-left: 200px;">
+                    <td class="text-right bg-secondary text-white h2" style="text-align: center;" colspan="3">
+                    </td>
+                    <td class="text-right bg-secondary text-white h2" style="text-align: center;">
+                         <div class="w-70 mx-auto text-right">
+                            <button type="submit" class="btn btn-danger"><a href="index.html" data-role="button" data-theme="b" data-icon="arrow-r">Submit</a></button>
+                         </div>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+    
+</body>
+</html>

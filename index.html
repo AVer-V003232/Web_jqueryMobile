@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title style="color: violet;">AYCinema</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: black;
+            text-decoration: none;
+        }
+        
+        a:active {
+            color: black;
+            text-decoration: none;
+        }
+        body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+    </style>
+    
+</head>
+<body>  
+        
+    <div is="page" id="home" data-role="page">
+            <div data-role="header" data-position="fixed" style="background:-webkit-linear-gradient(rgb(160, 100, 143),rgb(143, 91, 143));">                  
+                <h1 style="color:rgb(187, 19, 19);text-align:center;font-size:34px; margin-top: -40px;margin-bottom: -30px;"><img src="IMG/movie.png" width=50px height=50px style="margin-top: 10px; padding-top: 20px;">  AY's Cinema
+                    <div id="charging" class="fa" style="font-size: 40px; margin-top: 20px;color: blue; margin-left: 250px;"></div>
+                    <!--<script>
+                        function chargebattery() {
+                            var a;
+                            a = document.getElementById("charging");
+                            a.innerHTML = "&#xf244;";
+                            setTimeout(function () {
+                            a.innerHTML = "&#xf243;";
+                            }, 1000);
+                            setTimeout(function () {
+                            a.innerHTML = "&#xf242;";
+                            }, 2000);
+                            setTimeout(function () {
+                            a.innerHTML = "&#xf241;";
+                            }, 3000);
+                            setTimeout(function () {
+                            a.innerHTML = "&#xf240;";
+                            }, 4000);
+                        }
+                        chargebattery();
+                        setInterval(chargebattery, 5000);
+                    </script>-->
+                </h1>
+                <a class="ui-btn ui-btn-right ui-btn-icon-left ui-icon-info ui-btn-icon-notext ui-corner-all" style="margin:12px;" href="#Notice" rel="external"></a>
+            </div>
+            <div  role="main" class="ui-content">
+                <div style="margin-left: 400px;margin-right: 400px; margin-top: -20px;">
+                    <h1 style="color:rgb(71, 47, 209);text-align:center;font-size:24px; border-style: solid; border-color: green;background-color: rgb(206, 188, 188);">SELECT CATEGORY OF FILM</h1>
+                </div>
+                <fieldset class="ui-grid-b" style="margin-left: 50px; margin-top: -50px;">
+                        <div class="ui-block-a" style="width: 380px; text-align: center; margin-top: 40px">    
+                            <button style="display:inline-block" onclick="location.href='Marvel.html' ">
+                                <img src="IMG/marvel.png" style="width:60px; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;">
+                                <h5 style="color: red; font-size: 15px;">MARVEL</h5>  
+                            </button>   
+                        </div>
+                        <div class="ui-block-b" style="width: 380px; text-align: center; margin-top: 40px">
+                            <button style="display:inline-block" onclick="location.href='Action.html' ">
+                                <img src="IMG/actions2.png" style="width:60px; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;">
+                                <h5 style="color: red; font-size: 15px;">ACTION</h5>
+                            </button>
+                        </div>
+                        <div class="ui-block-c" style="width: 380px; text-align: center; margin-top: 40px">
+                            <button style="display:inline-block" onclick="location.href='Comedy.html' ">
+                                <img src="IMG/comedy.png" style="width:60px; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;">
+                                <h5 style="color: red; font-size: 15px;">COMEDY</h5>
+                            </button>
+                        </div>
+                </fieldset>
+                <fieldset class="ui-grid-b" style="margin-left: 50px; margin-top: -50px;">
+                        <div class="ui-block-a" style="width: 380px; text-align: center; margin-top: 40px">    
+                            <button style="display:inline-block" onclick="location.href='Drama.html' ">
+                                <img src="IMG/drama.png" style="width:60px; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;">
+                                <h5 style="color: red; font-size: 15px;">DRAMA</h5>  
+                            </button>   
+                        </div>
+                        <div class="ui-block-b" style="width: 380px; text-align: center; margin-top: 40px">
+                            <button style="display:inline-block" onclick="location.href='Romance.html' ">
+                                <img src="IMG/romance.png" style="width:60px; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;">
+                                <h5 style="color: red; font-size: 15px;">ROMANCE</h5>
+                            </button>
+                        </div>
+                        <div class="ui-block-c" style="width: 380px; text-align: center; margin-top: 40px">
+                            <button style="display:inline-block" onclick="location.href='Scient.html' ">
+                                <img src="IMG/star_wars.png" style="width:60px; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;">
+                                <h5 style="color: red; font-size: 15px;">SCIENCE</h5>
+                            </button>
+                        </div>
+                </fieldset>
+                <div style="margin-left: 400px;margin-right: 400px;">
+                    <h1 style="color:rgb(71, 47, 209);text-align:center;font-size:24px; border-style: solid; border-color: green;background-color: rgb(206, 188, 188);">SELECT CATEGORY OF FOOD</h1>    
+                </div>
+                <fieldset class="ui-grid-c" style="margin-left: 280px; margin-top: -50px;">
+                            <div class="ui-block-a" style="width: 380px; text-align: center; margin-top: 40px">    
+                                <button style="display:inline-block" onclick="location.href='drink.html' ">
+                                    <img src="IMG/Drink.png" style="width:60px; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;">
+                                    <h5 style="color: red; font-size: 15px;">DRINK</h5>  
+                                </button>   
+                            </div>
+
+                            <div class="ui-block-c" style="width: 380px; text-align: center; margin-top: 40px">
+                                <button style="display:inline-block" onclick="location.href='food.html' ">
+                                    <img src="IMG/hamburger.png" style="width:60px; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;">
+                                    <h5 style="color: red; font-size: 15px;">FOOD</h5>
+                                </button>
+                            </div>
+                </fieldset>
+
+            <button style="margin-bottom: 30px;margin-left: 50px; background-color: gray; color: blanchedalmond;" class="open-button" onclick="openForm()">CHAT MENU</button>
+
+            <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Chat</h1>
+
+                <label for="msg"><b>Message</b></label>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">SEND</button>
+                <button style="margin-bottom: 50px;" type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+            </div>
+
+            <script>
+            function openForm() {
+            document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+            }
+</script>
+
+            </div>  
+            <div is="footer" data-role="footer" data-position="fixed" data-theme="b" style="margin-top: -30px;margin-bottom: -20px;">
+                <h3 style="color: rgb(26, 212, 150); font-size: 30px;">
+                    <!--   
+                    <div id="div1" class="fa"></div>
+
+                        <script>
+                        function smile() {
+                          var a;
+                          a = document.getElementById("div1");
+                          a.innerHTML = "&#xf118;";
+                          setTimeout(function () {
+                              a.innerHTML = "&#xf11a;";
+                            }, 1000);
+                          setTimeout(function () {
+                              a.innerHTML = "&#xf119;";
+                            }, 2000);
+                          setTimeout(function () {
+                              a.innerHTML = "&#xf11a;";
+                            }, 3000);
+                        }
+                        smile();
+                        setInterval(smile, 4000);
+                        </script>
+                    
+                    <div id="div2" class="fa"></div>
+
+                        <script>
+                        function smile() {
+                          var a;
+                          a = document.getElementById("div2");
+                          a.innerHTML = "&#xf118;";
+                          setTimeout(function () {
+                              a.innerHTML = "&#xf11a;";
+                            }, 1000);
+                          setTimeout(function () {
+                              a.innerHTML = "&#xf119;";
+                            }, 2000);
+                          setTimeout(function () {
+                              a.innerHTML = "&#xf11a;";
+                            }, 3000);
+                        }
+                        smile();
+                        setInterval(smile, 4000);
+                        </script>--> 
+                        LOVE YOU 3000
+                </h3>   
+                         
+            </div>
+    </div>
+  
+    <div id="Notice" data-role="page" style="background-color:black">
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <h3 style="color:rgb(32, 21, 180);font-weight:bold;font-family:Calibri;font-size:20px;text-align: center;">A new cinema in Taiwan by<br> AY's family
+                        We come from Vietnam<br> If you have something wrong<br> Don't mind contact us.<br>
+                        Our phone number : +886 123456<br>
+                </h3>
+    
+                <a class="ui-btn ui-btn-left" href="#home" data-transition="slide" data-direction="reverse" style = "color : red;">Back</a>
+            </div>
+            <h2 style="color: red;text-align: center;">Search us on GOOGLE MAP</h2>
+            <div style="overflow:hidden;width: 700px;position: relative; margin-left: 50px;"><iframe width="700" height="440" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Huwei+(Title)&amp;ie=UTF8&amp;t=k&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/de/">Embedgooglemaps DE</a> & <a href="http://lasvegasstatistics.embedgooglemaps.com">las vegas economy</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+
+            <button style="background-color: gray; color: aliceblue;" class="open-button" onclick="openForm()">CHAT MENU</button>
+
+            <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Chat</h1>`1a
+
+                <label for="msg"><b>Message</b></label>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+            </div>
+
+            <script>
+            function openForm() {
+            document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+            }
+            </script>
+            <img src="IMG/cinema_02.webp" style="width: 80%; margin:5px 15px 5px 18px;margin-top: 15px;margin-bottom: -5px;; margin-left: 100px;">
+    </div>
+</body>
+</html>
